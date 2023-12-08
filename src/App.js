@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { AddFriendForm } from './components/AddFriendForm';
+import FriendList from './components/FriendList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My simple Dexie app</h1>
+
+      <h2>Add Friend</h2>
+      <AddFriendForm defaultAge={21} />
+
+      <h2>Friend List</h2>
+      <FriendList minAge={18} maxAge={65} />
+
     </div>
   );
 }
